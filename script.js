@@ -19,11 +19,11 @@ function restartGame() {
 }
 
 function dealCards() {
-    cards.forEach((card, id) => {
+    cards.forEach((card) => {
         // create a dom element and assign it
         let newCardElement = document.createElement("div")
-        newCardElement.classList.add(id)
-        newCardElement.innerHTML = id;
+        newCardElement.classList.add(card.id)
+        newCardElement.innerHTML = card.id + " "+ card.first;
         newCardElement.addEventListener("click", function (e) {
             if (!this.isFlipped) {
                 this.classList.add("flipped")
@@ -39,9 +39,9 @@ function dealCards() {
 }
 
 function shuffleCards() {
-    for (let i = 0; i < cardCount-1; i++) {
-        newCard = card
-        newCard.id = i
+    for (let i = 0; i < cardCount; i++) {
+        let newCard = { ...card };
+        newCard.id = Math.floor(i/2)
         cards.forEach(card => {
            if (card.id == newCard.id) newCard.first = false
         })

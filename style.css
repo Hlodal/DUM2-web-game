@@ -16,6 +16,7 @@ body {
 #cards-container div {
     display: grid;
     place-items: center;
+    aspect-ratio: 1/1;
     background: rgba(0, 0, 0, 0.149);
     background: linear-gradient(-35deg, rgba(82, 82, 82, 0.2), rgba(163, 163, 163, 0.05));
     backdrop-filter: blur(1000px);
