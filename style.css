@@ -5,9 +5,11 @@ body {
 
 #cards-container {
     margin-inline: auto;
-    aspect-ratio: 1/1;
+    /* max-height: 100dvh; */
+    max-width: 120dvh;
+    /* min-height: 80dvh;  */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
     gap: 20px;
 
     perspective: 1000px;
@@ -55,4 +57,11 @@ body {
 .placeholder {
     background: linear-gradient(35deg, rgba(124, 124, 124, 0.175), rgba(124, 124, 124, 0.1));
     aspect-ratio: 1/1;
+}
+
+
+@media screen and (max-width: 778px) {
+    #cards-container {
+        gap: 14px;
+    }
 }
