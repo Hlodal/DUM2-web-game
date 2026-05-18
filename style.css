@@ -106,6 +106,6 @@ body {
 
 @media screen and (max-width: 778px) {
     #cards-container {
-        gap: 14px;
+        gap: 12px;
     }
 }
